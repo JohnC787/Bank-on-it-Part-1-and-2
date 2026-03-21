@@ -1,7 +1,7 @@
 
 ## Program Algorithm
 
-1. **Start Program**
+1. Start Program
 
    * Create a default `Customer` object
    * Initialize:
@@ -10,7 +10,7 @@
      * PIN = "0000"
      * Checking and Savings accounts with $0 balance
 
-2. **User Login**
+2. User Login
 
    * Prompt user to enter username
    * Prompt user to enter PIN
@@ -22,7 +22,7 @@
      * Display "Login Failed"
      * End program
 
-3. **Display Customer Menu**
+3. Display Customer Menu
 
    * Show options:
 
@@ -31,7 +31,7 @@
      * 2 → Manage Savings Account
      * 3 → Change PIN
 
-4. **Process Customer Choice**
+4. Process Customer Choice
 
    * If user selects:
 
