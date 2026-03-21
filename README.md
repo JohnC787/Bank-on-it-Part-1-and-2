@@ -3,7 +3,7 @@
 
 1. Start Program
 
-   * Create a default `Customer` object
+   * Create a default Customer object
    * Initialize:
 
      * Username = "Alice"
