@@ -1,10 +1,8 @@
 import java.util.Scanner;
 import java.io.Serializable;
-implements Serializable
 
 public class CheckingAccount implements HasMenu {
-    private double balance;
-    private Scanner scanner = new Scanner(System.in);
+    private double balance;;
 
     public CheckingAccount() {
         this.balance = 0.0;
@@ -27,6 +25,7 @@ public class CheckingAccount implements HasMenu {
     }
 
     private double getDouble() {
+        Scanner scanner = new Scanner(System.in);
         try {
             return Double.parseDouble(scanner.nextLine());
         } catch (Exception e) {
