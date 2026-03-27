@@ -80,4 +80,12 @@ public class Customer extends User implements Serializable {
         Customer c = new Customer();
         c.start();
     }
+
+    public CheckingAccount getChecking() {
+        return checking;
+    }
+    
+    public SavingsAccount getSavings() {
+        return savings;
+    }
 }
