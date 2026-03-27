@@ -1,4 +1,6 @@
 import java.util.Scanner;
+import java.io.Serializable;
+implements Serializable
 
 public class CheckingAccount implements HasMenu {
     private double balance;
