@@ -19,12 +19,11 @@ public class Bank implements HasMenu {
     }
 
     @Override
-    public void menu() {
-        System.out.println("\nBank Menu");
-        System.out.println("0) Exit system");
-        System.out.println("1) Login as admin");
-        System.out.println("2) Login as customer");
-        System.out.print("Action: ");
+    public String menu() {
+        return "\nBank Menu\n" +
+               "0) Exit system\n" +
+               "1) Login as admin\n" +
+               "2) Login as customer\n";
     }
 
     @Override
