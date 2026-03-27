@@ -1,9 +1,9 @@
 public class Admin extends User implements HasMenu {
 
     public Admin() {
-        super("admin", "0000");
+        setUserName("admin");
+        setPIN("0000");
     }
-
     @Override
     public String menu() {
         return "\nAdmin Menu\n" +
