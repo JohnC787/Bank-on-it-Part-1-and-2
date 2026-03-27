@@ -1,9 +1,9 @@
 import java.util.Scanner;
+import java.io.Serializable;
 
-public class Customer extends User {
+public class Customer extends User implements Serializable {
     private CheckingAccount checking;
     private SavingsAccount savings;
-    private Scanner scanner = new Scanner(System.in);
 
     public Customer() {
         checking = new CheckingAccount();
@@ -25,19 +25,26 @@ public class Customer extends User {
 
     @Override
     public void start() {
+        Scanner scanner = new Scanner(System.in);
+    
         if (!login()) {
             System.out.println("Login Failed");
             return;
         }
-
+    
         System.out.println("Login Successful");
-
+    
         int choice;
         do {
             System.out.println(menu());
             System.out.print("Action (0-3): ");
-            choice = Integer.parseInt(scanner.nextLine());
-
+    
+            try {
+                choice = Integer.parseInt(scanner.nextLine());
+            } catch (Exception e) {
+                choice = 0;
+            }
+    
             switch (choice) {
                 case 1:
                     System.out.println("Checking Account");
@@ -55,6 +62,8 @@ public class Customer extends User {
     }
 
     public void changePin() {
+        Scanner scanner = new Scanner(System.in);
+    
         System.out.print("Enter new PIN: ");
         setPIN(scanner.nextLine());
         System.out.println("PIN updated.");
