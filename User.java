@@ -4,20 +4,22 @@ import java.util.Scanner;
 public abstract class User implements HasMenu, Serializable {
     private String userName;
     private String PIN;
-    private Scanner scanner = new Scanner(System.in);
 
     public boolean login() {
+        Scanner scanner = new Scanner(System.in);
+    
         System.out.print("User name: ");
         String u = scanner.nextLine();
+    
         System.out.print("PIN: ");
         String p = scanner.nextLine();
+    
         return login(u, p);
     }
-
     public boolean login(String userName, String PIN) {
-        return this.userName.equals(userName) && this.PIN.equals(PIN);
+        return this.userName != null && this.PIN != null &&
+               this.userName.equals(userName) && this.PIN.equals(PIN);
     }
-
     public void setUserName(String userName) {
         this.userName = userName;
     }
