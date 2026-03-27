@@ -85,4 +85,8 @@ public class CheckingAccount implements HasMenu {
         CheckingAccount acc = new CheckingAccount();
         acc.start();
     }
+
+    public void deposit(double amount) {
+        balance += amount;
+    }
 }
