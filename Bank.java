@@ -9,10 +9,6 @@ public class Bank implements HasMenu {
     public Bank() {
         admin = new Admin();
 
-        // Uncomment these TWO lines ONE TIME if you change classes
-        // loadSampleCustomers();
-        // saveCustomers();
-
         loadCustomers();
         start();
         saveCustomers();
@@ -53,7 +49,6 @@ public class Bank implements HasMenu {
         } while (choice != 0);
     }
 
-    // ================= ADMIN MENU =================
     public void adminStart() {
         Scanner sc = new Scanner(System.in);
         int choice;
@@ -78,7 +73,6 @@ public class Bank implements HasMenu {
         } while (choice != 0);
     }
 
-    // ================= CUSTOMER LOGIN =================
     public void customerLogin() {
         Scanner sc = new Scanner(System.in);
 
@@ -98,7 +92,6 @@ public class Bank implements HasMenu {
         System.out.println("Customer not found.");
     }
 
-    // ================= ADMIN FUNCTIONS =================
     public void fullCustomerReport() {
         System.out.println("\nFull customer report");
         for (Customer c : customers) {
@@ -128,7 +121,6 @@ public class Bank implements HasMenu {
         }
     }
 
-    // ================= SAMPLE DATA =================
     public void loadSampleCustomers() {
         customers = new CustomerList();
 
@@ -144,7 +136,6 @@ public class Bank implements HasMenu {
         customers.add(c);
     }
 
-    // ================= SERIALIZATION =================
     public void saveCustomers() {
         try {
             ObjectOutputStream out = new ObjectOutputStream(
@@ -167,7 +158,6 @@ public class Bank implements HasMenu {
         }
     }
 
-    // ================= MAIN =================
     public static void main(String[] args) {
         new Bank();
     }
